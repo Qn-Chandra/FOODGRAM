@@ -1,0 +1,225 @@
+:root {
+    --primarycolor: #0e6253;
+    --secondarycolor: #ffc107;
+    --whitecolor: #fff;
+    --blckcolor: black;
+    --softgreen: #d9f2ee;
+    --darkgreen: #a7a7a7;
+    --greycolor: #f5f5f5;
+}
+
+/* 🌟 Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🌟 Navbar */
+.navbar {
+    background: var(--primarycolor);
+    color: var(--whitecolor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--secondarycolor);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--whitecolor);
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--secondarycolor);
+}
+
+/* 🌟 Hero Section */
+.heading {
+    background-color: var(--primarycolor);
+    color: var(--secondarycolor);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 60px;
+    margin: 0;
+}
+
+p {
+    font-size: 24px;
+    margin: 10px 0 30px 0;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--secondarycolor);
+    color: var(--primarycolor);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--whitecolor);
+    color: var(--primarycolor);
+    transform: scale(1.05);
+}
+
+/* Animation for text + button */
+h1, p, button {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1s ease forwards;
+}
+
+h1 { animation-delay: 0.3s; }
+p { animation-delay: 0.6s; }
+button { animation-delay: 0.9s; }
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🌟 Food Images */
+.food-img {
+    width: 220px;               /* ektu boro kora holo */
+    height: 220px;
+    border-radius: 50%;         /* puro gol */
+    position: absolute;
+    object-fit: cover;          /* crop kore round er moddhe thakbe */
+    border: 5px solid #fff;     /* white border */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4); /* shadow diye 3D feel */
+    opacity: 0;                 /* surute invisible */
+    animation: slideIn 1s ease forwards;
+
+}
+
+/* Top-left */
+.top-left {
+    top: 80px;
+    left: 100px;
+    transform: translate(-150%, -150%);
+    animation-delay: 0.3s;
+}
+
+/* Top-right */
+.top-right {
+    top: 80px;
+    right: 100px;
+   transform: translate(-150%, -150%);
+    animation-delay: 0.6s;
+}
+
+/* Bottom-left */
+.bottom-left {
+    bottom: 100px;
+    left: 100px;
+    transform: translate(-150%, -150%);
+    animation-delay: 0.9s;
+}
+
+/* Bottom-right */
+.bottom-right {
+    bottom:100px;
+    right: 100px;
+    transform: translate(-150%, 150%);
+    animation-delay: 0.9s;
+}
+
+
+/* Top-center */
+/* Top-center */
+.top-center {
+    position: absolute;   /* ensure positioning works */
+    top: 10px;            /* page er top theke 50px */
+    left: 40%;            /* horizontal center */
+    transform: translateX(-50%); 
+    animation-delay: 0.9s;
+}
+
+/* Bottom-center */
+.bottom-center {
+    position: absolute;   /* ensure positioning works */
+    bottom: 10px;         /* page er bottom theke 50px */
+    left: 40%;            /* horizontal center */
+    transform: translateX(-50%); 
+    animation-delay: 0.9s;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+/* 🌟 Footer */
+footer {
+    background: var(--primarycolor);
+    color: var(--whitecolor);
+    padding: 20px 50px;
+    text-align: center;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* 🌟 Social Icons */
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: var(--secondarycolor);
+    font-size: 26px;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--whitecolor);
+    transform: scale(1.2);
+}
+
+    

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <!--addid font from google--->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>responsive food delevery service</title>
+</head>
+<body>
+    <!--sidebar-->
+    <div class="sidebar">
+        <!--logo-->
+        <h1 class="logo">FoodGram</h1>
+        <!--listed menu-->
+        <div class="sidebar-menu">
+            <a href="#"><ion-icon name="storefront-outline"></ion-icon>Home</a>
+            <a href="#"><ion-icon name="receipt-outline"></ion-icon>Bills</a>
+            <a href="#"><ion-icon name="wallet-outline"></ion-icon>Wallet</a>
+            <a href="#"><ion-icon name="notifications-outline"></ion-icon>Notifications</a>
+            <a href="#"><ion-icon name="chatbubbles-outline"></ion-icon>Concat Us</a>
+            <a href="#"><ion-icon name="settings-outline"></ion-icon>Setting</a>
+
+        </div>
+        <!--log out-->
+        <div class="sidebar-logout">
+            <a href="#"><ion-icon name="log-out-outline"></ion-icon>log out</a>
+        </div>
+    </div>
+    <!--main part-->
+    <div class="main">
+        <!--main navbar(contains search bar and shopping cart)-->
+        <div class="main-navbar">
+            <!--menu when appear on mobile version-->
+            <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+            <!--searchbar-->
+            <div class="search">
+                <input type="text"placeholder="what you want to eat ?">
+                <button class="search-btn">search</button>
+            </div>
+            <!--profile icon on left side of navbar-->
+            <div class="profile">
+                <a class="cart" href="#"><ion-icon name="cart-outline"></ion-icon></a>
+                <a class="user"href="#"><ion-icon name="person-outline"></ion-icon></a>
+            </div>
+        </div>
+        <!--main hightlight(contains highlight of specific food)-->
+        <div class="main-highlight">
+            <!--title section and arrow-->
+            <div class="main-header">
+                <h2 class="main-title">Recomendations</h2>
+                <div class="main-arrow">
+                    <ion-icon class="back" name="chevron-back-circle-outline"></ion-icon>
+                    <ion-icon class="next" name="chevron-forward-circle-outline"></ion-icon>
+                </div>
+            </div>
+            <!--highlight menu-->
+            <div class="highlight-warper">
+                <div class="highlight-card">
+                    <img class="highlight-img" src="salad.jpg">
+                    <div class="highlight-desc">
+                        <h4>Fresh Salad</h4>
+                        <p>Rs.599</p>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <img class="highlight-img" src="coffe.jpg">
+                     <div class="highlight-desc">
+                        <h4>Coffe Latte</h4>
+                        <p>Rs.299</p>
+                    </div>
+                </div>
+                 <div class="highlight-card">
+                    <img class="highlight-img" src="steak.jpg">
+                     <div class="highlight-desc">
+                        <h4>Premium Steak</h4>
+                        <p>Rs.799</p>
+                    </div>
+            </div>
+             <div class="highlight-card">
+                    <img class="highlight-img" src="burger.jpg">
+                     <div class="highlight-desc">
+                        <h4>Big Burger</h4>
+                        <p>Rs.399</p>
+                    </div>
+
+        </div>
+        </div>
+        </div>
+        <!--main menu(list of all food)-->
+<div class="main-menus">
+    <!--filter section-->
+    <div class="main-filter">
+        <div>
+            <h2 class="main-title">Menu<br>Category</h2>
+            <div class="main-arrow">
+                <ion-icon class="back-menus"name="chevron-back-circle-outline"></ion-icon>
+                <ion-icon class="next-menus"name="chevron-forward-circle-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="filter-warper">
+            <div class="filter-card">
+                <div class="filter-icon">
+                  <ion-icon  name="restaurant-outline"></ion-icon>
+                </div>
+                <p>ALL MENUS</p>
+            </div>
+            <div class="filter-card">
+            <div class="filter-icon">
+                <ion-icon name="fast-food-outline"></ioon-icon>
+            </div>
+            <p>Burger</p>
+        </div>
+        <div class="filter-card">
+         <div class="filter-icon">
+            <ion-icon name="pizza-outline"></ion-icon>
+            </div>
+          <p>Pizza</p>  
+        </div>
+        <div class="filter-card">
+        <div class="filter-icon">
+        <ion-icon name="wine-outline"></ion-icon>
+        </div>
+            <p>Wine</p>
+        </div>
+           <div class="filter-card">
+            <div class="filter-icon">
+                <ion-icon name="ice-cream-outline"></ion-icon>
+                </div>
+                <p>Ice-Cream</p>
+            </div>
+            <div class="filter-card">
+           <div class="filter-icon">
+                <ion-icon name="cafe-outline"></ion-icon>
+                </div>
+                <p>Coffe</p>
+            </div>
+            <div class="filter-card">
+           <div class="filter-icon">
+                <ion-icon name="fish-outline"></ion-icon>
+                </div>
+                <p>Sea Food</p>
+            </div> 
+            <div class="filter-card">
+         <div class="filter-icon">
+                <ion-icon name="nutrition-outline"></ion-icon>
+                </div>
+                <p>Healthy</p>
+                </div> 
+         </div>
+    </div>
+    <hr class="divider">
+    
+    <!--list of food-->
+    <div class="main-detail">
+    <h2 class="main-title">Choose order</h2>
+    <div class="detail-wrapper">
+        <div class="detail-card">
+            <img class="detail-img" src="seafood.jpg">
+            <div class="detail-desc">
+                <div class="detail-name">
+                    <h4>Shrimp Soup</h4>
+                    <p class="detail-sub">Hot & creamy soup with tender shrimps, rich spices, and a burst of ocean-fresh flavor in every sip</p>
+                    <p class="price">Rs.300</p>
+                </div>
+
+                        <div class="nutrition-info">
+            <p>Calories: Loading...</p>
+            <p>Protein: Loading...</p>
+            <p>Carbs: Loading...</p>
+            <p>Fat: Loading...</p>
+        </div>
+
+
+
+
+   <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="detail-card">
+            <img class="detail-img" src="pizza.jpg">
+            <div class="detail-desc">
+                <div class="detail-name">
+                    <h4>Pizza</h4>
+                    <p class="detail-sub">Cheesy, crispy, and loaded with fresh toppings-a slice of happiness you can’t resist</p>
+                    <p class="price">Rs.200</p>
+                </div>
+
+
+ <div class="nutrition-info">
+            <p>Calories: Loading...</p>
+            <p>Protein: Loading...</p>
+            <p>Carbs: Loading...</p>
+            <p>Fat: Loading...</p>
+        </div>
+
+                <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="detail-card">
+            <img class="detail-img" src="wine.jpg">
+            <div class="detail-desc">
+                <div class="detail-name">
+                    <h4>wine</h4>
+                    <p class="detail-sub">Smooth, aromatic, and perfectly aged-the sip that completes your meal.</p>
+                    <p class="price">Rs.4999</p>
+                </div>
+
+
+                        <div class="nutrition-info">
+            <p>Calories: Loading...</p>
+            <p>Protein: Loading...</p>
+            <p>Carbs: Loading...</p>
+            <p>Fat: Loading...</p>
+        </div>
+
+
+
+
+
+
+
+
+                <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="detail-card">
+            <img class="detail-img" src="burger.jpg">
+            <div class="detail-desc">
+                <div class="detail-name">
+                    <h4>Burger</h4>
+                    <p class="detail-sub">Juicy grilled patty, soft bun, and mouthwatering sauces-the burger of your dreams</p>
+                    <p class="price">Rs.4999</p>
+                </div>
+
+
+                        <div class="nutrition-info">
+            <p>Calories: Loading...</p>
+            <p>Protein: Loading...</p>
+            <p>Carbs: Loading...</p>
+            <p>Fat: Loading...</p>
+        </div>
+
+
+
+
+
+
+
+                <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="detail-card">
+            <img class="detail-img" src="coffe.jpg">
+            <div class="detail-desc">
+                <div class="detail-name">
+                    <h4>Coffe</h4>
+                    <p class="detail-sub">Freshly brewed, bold, and aromatic-a perfect energy booster any time of the day</p>
+                    <p class="price">Rs.399</p>
+                </div>
+
+
+                        <div class="nutrition-info">
+            <p>Calories: Loading...</p>
+            <p>Protein: Loading...</p>
+            <p>Carbs: Loading...</p>
+            <p>Fat: Loading...</p>
+        </div>
+
+
+
+
+
+                <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="detail-card">
+            <img class="detail-img" src="salad.jpg">
+            <div class="detail-desc">
+                <div class="detail-name">
+                    <h4>Fresh Salad</h4>
+                    <p class="detail-sub">Crunchy, colorful and tossed with light dressing-health and taste in every bite</p>
+                    <p class="price">Rs.699</p>
+                </div>
+
+
+
+                        <div class="nutrition-info">
+            <p>Calories: Loading...</p>
+            <p>Protein: Loading...</p>
+            <p>Carbs: Loading...</p>
+            <p>Fat: Loading...</p>
+        </div>
+
+
+
+
+
+                <ion-icon class="detail-favorites" name="bookmark-outline"></ion-icon>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<!--adding icons from ionicons in google-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!--adding javascript-->
+<script src="app.js"></script>
+
+</html>

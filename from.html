@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In Form</title>
+  <style>
+    :root {
+      --primarycolor: #0e6253;
+      --secondarycolor: #ffc107;
+      --whitecolor: #fff;
+      --blckcolor: black;
+      --softgreen: #d9f2ee;
+      --darkgreen: #a7a7a7;
+      --greycolor: #f5f5f5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--softgreen);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .signin-box {
+      background: var(--whitecolor);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      width: 350px;
+      text-align: center;
+    }
+
+    .signin-box h2 {
+      margin-bottom: 20px;
+      color: var(--primarycolor);
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid var(--darkgreen);
+      border-radius: 8px;
+      outline: none;
+    }
+
+    .input-field:focus {
+      border-color: var(--primarycolor);
+      box-shadow: 0 0 5px var(--primarycolor);
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      margin: 15px 0;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .btn-login {
+      background: var(--primarycolor);
+      color: var(--whitecolor);
+    }
+
+    .btn-login:hover {
+      background: #094c40;
+    }
+
+    .btn-gmail {
+      background: var(--secondarycolor);
+      color: var(--blckcolor);
+    }
+
+    .btn-gmail:hover {
+      background: #e0a800;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="signin-box">
+    <h2>Sign In</h2>
+    <form id="signinForm">
+      <input type="text" placeholder="Enter your name" class="input-field" name="name" required>
+      <input type="tel" placeholder="Enter your phone number" class="input-field" name="phone" required>
+      <button type="submit" class="btn btn-login">Sign In</button>
+      <p>or</p>
+      <button type="button" class="btn btn-gmail">Login with Gmail</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("signinForm");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const name = form.name.value;
+      const phone = form.phone.value;
+
+      try {
+        const res = await fetch("http://localhost:5000/signin", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, phone })
+        });
+
+        const data = await res.json();
+        alert(data.message || data.error);
+        form.reset();
+      } catch (error) {
+        alert("❌ Server error, please try again.");
+        console.error(error);
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+  
