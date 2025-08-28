@@ -17,4 +17,4 @@ Tech Stack
 Frontend: HTML, CSS, JavaScript
 Backend: Node.js
 Database:MongoDB
-Payment Gateway:PayPal
+Payment Gateway:Razorpay
